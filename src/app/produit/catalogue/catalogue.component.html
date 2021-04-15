@@ -1,0 +1,16 @@
+<br/>
+<button (click)="onClickGetVoiture()"> Afficher les produits </button>
+<br/>
+<div  *ngFor = "let v of observableBouchon$ | async">
+    Voiture : {{v.modele}} - Prix : {{v.prix}}
+    <button (click)="addPanier(v.ref)">Ajouter au panier</button>
+    <button (click)="viewDetail(v.ref)">Plus d'information sur la voiture</button>
+    <button (click)="delPanier(v.ref)">Supprimer du panier</button>
+</div>
+<br/>
+<!-- <button (click)="onClickGetVoitureCher()"> Trouvez la voiture > à </button><input [(ngModel)]="prixVoiture"> -->
+<!-- <button (click)="onClickGetVoitureCher()"> Afficher les voitures </button>
+<div  *ngFor = "let v of tableauVoiture">
+    Voiture : {{v.modele}} - Prix : {{v.prix}}
+</div> -->
+
