@@ -12,8 +12,6 @@ $app = AppFactory::create();
 
 const JWT_SECRET = "KGDkdgGDEKJDdgDJDKJgdGED5464684DdDdEF84RZ68BNUJlh";
 
-
-
 function addCorsHeaders (Response $response) : Response {
 
     $response =  $response
@@ -24,7 +22,6 @@ function addCorsHeaders (Response $response) : Response {
 
     return $response;
 }
-
 
 // Middleware de validation du Jwt
 $options = [
